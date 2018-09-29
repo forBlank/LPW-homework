@@ -3,7 +3,7 @@
 
 &emsp;&emsp;在制作第一个HTML5游戏过程中，虽然有着详细的教程指导，但笔者还是犯了各种莫名其妙的诡异错误，于是有感而发，写下这篇博客，以供参考。
 
-&emsp;&emsp;本次游戏制作所用软件为Construct 2，博客内容围绕Beginner's guide to Construct 2来进行叙述，链接如下：
+&emsp;&emsp;本次游戏制作所用软件为Construct 2，博客内容围绕教程Beginner's guide to Construct 2来进行叙述，链接如下：
 
 &emsp;&emsp;官方网站：[Construct 2](https://www.scirra.com/construct2)
 
@@ -56,7 +56,7 @@ PS:官方吐槽：快返回第二页查看“添加输入设备”
 
 ![image][F]
 
-生成后，软件默认的字体并不便于观看，所以我们能在左边属性栏中以下两个选项进行设置：改变颜色，调整字号，加粗斜体...
+生成后，软件默认的字体并不便于观看，所以我们能在左边属性栏中以下两个选项进行设置：**改变颜色，调整字号，加粗斜体**...
 
 ![image][G]
 
