@@ -81,6 +81,8 @@
 
 在战争中，因为图灵和众多科学家的智慧，让信息具有毁灭的力量。如果把战争形容成扑克游戏，那么在1941年8月，英国在对手的牌后安插了一面镜子，从而几乎能够看清德国所有的牌。
 
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/JLb4ouFlKsVZMRvH6FfiUFi0rVQ4G2jGJmHncob4ocw!/b/dDQBAAAAAAAA&bo=bAIRAQAAAAARB04!&rf=viewer_4)
+
 当然这也是丘吉尔识货，当时的英国军官意识不到图灵他们破解的这些宝贵的信息有多么重要，也不会利用这些信息，直到科学家们给丘吉尔上书，丘吉尔给了布莱切利很高的特权，才使得信息发挥了它原本的作用。
 
 第二个让战争胜利的原因是德国的情报部门太信任Enigma机，实际上，他们非常肯定，英国人一定通过某种方法，得知了U艇的位置。但是，德国海军指挥部情报部门的领导坚持认为，敌人不可能破译通信。如果他们改变Enigma的使用方式，那么战争的结局会不会改变呢？
@@ -97,7 +99,7 @@
 
 图灵用的开关是继电器，通过电流来实现计算机的逻辑，变成实际的物理工作。这是一个重要的标志，这意味着图灵越过了数学与工程、逻辑与物理之间的界线，开始面对这个实体的世界了。
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/DwhbBPajpgN7vRJT6X9y7Sz*eomMi.N0XimMchYB1VI!/b/dFMBAAAAAAAA&bo=WALzAAAAAAARB5k!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/sjZjBqcDt7YJrAC8XXBdlGqGvOS3b8xWvvCWr.2ZIGM!/b/dDUBAAAAAAAA&bo=*QDIAAAAAAARBwU!&rf=viewer_4)
 
 二战结束后，美国开始构造ENIAC，英国的科学家们也开始了ACE项目。不过这个项目最终流产了，其中最难解决的问题就是存储。此外，ACE项目还面临着一个更加全局性的困难，图灵把领先世界几十年的思想，倾注在了一个迂腐落后的组织中。计算机成功的关键在于跨越「数学」和「工程」之间的鸿沟，而这实在太困难了。英国人没能实现，所以教科书中的第一台电子计算机都写的是美国的ENIAC。
 
