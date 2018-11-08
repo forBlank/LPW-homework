@@ -4,11 +4,12 @@
 
 1. [01-使用维基百科（Wikipedia）解释名词](hw01)
 2. [02-进制转换/名词解释（Wikipedia）](hw02)
-3. [03-数据表示/概念解释（Wikipedia）](hw03)
-4. [04-数据表示/概念解释（Wikipedia）](hw04)
+3. [03-数据表示1/概念解释（Wikipedia）](hw03)
+4. [04-数据表示2/概念解释（Wikipedia）](hw04)
 5. [05-门电路/概念解释（Wikipedia）](hw05)
 6. [06-计算机组成/概念解释（Wikipedia）](hw06)
 7. [07-机器语言/概念解释（Wikipedia）](hw07)
+8. [08-问题求解与算法设计/概念解释（Wikipedia）](hw08)
 
 ## 实验与实践
 
