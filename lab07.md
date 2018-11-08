@@ -12,7 +12,9 @@
 
 #### 1.PC，IR 寄存器的作用。
 
-IR : 存放正在执行的指令副本，PC : 存放下一条要执行指令的地址
+IR : 存放正在执行的指令副本
+
+PC : 存放下一条要执行指令的地址
 
 #### 2.ACC 寄存器的全称与作用。
 
@@ -20,7 +22,7 @@ ACC 寄存器的全称为accumulator，用来储存计算产生的中间结果
 
 #### 3.用“LOD #3”指令的执行过程，解释Fetch-Execute周期。
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/IXusEduux4Ww9JBmgLFzOti6i0lYQC4uZXIkiMsR5eg!/c/dFMBAAAAAAAA&bo=bwKLAQAAAAACF9Q!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/IXusEduux4Ww9JBmgLFzOti6i0lYQC4uZXIkiMsR5eg!/b/dFMBAAAAAAAA&bo=bwKLAQAAAAACF9Q!&rf=viewer_4)
 
 取得指令：从PC中获取指令地址，PC加2，再通过总线从内存中获取指令“LOD #3”，将指令送到IR中
 
@@ -32,7 +34,7 @@ ACC 寄存器的全称为accumulator，用来储存计算产生的中间结果
 
 #### 4.用“ADD W” 指令的执行过程，解释Fetch-Execute周期。
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/NJ12*9hXTeH8HC46OKyQ5kJscBJ.z8KAoo4g6g2ni3o!/c/dDcBAAAAAAAA&bo=bwKLAQAAAAACB8Q!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/NJ12*9hXTeH8HC46OKyQ5kJscBJ.z8KAoo4g6g2ni3o!/b/dDcBAAAAAAAA&bo=bwKLAQAAAAACF9Q!&rf=viewer_4)
 
 取得指令：从PC中获取指令地址，PC加2，再通过总线从内存中获取指令“ADD W”，将指令送到IR中
 
