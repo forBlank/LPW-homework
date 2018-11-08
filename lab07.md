@@ -8,6 +8,8 @@
 
 ### （2）点step after step。观察并回答下面问题：
 
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/cYhztmcdseIVgqfXHgxeelZ4IzuJx.0Bzqy61Eqcr20!/b/dDMBAAAAAAAA&bo=bwKLAQAAAAADF9U!&rf=viewer_4)
+
 #### 1.PC，IR 寄存器的作用。
 
 IR : 存放正在执行的指令副本，PC : 存放下一条要执行指令的地址
@@ -18,6 +20,8 @@ ACC 寄存器的全称为accumulator，用来储存计算产生的中间结果
 
 #### 3.用“LOD #3”指令的执行过程，解释Fetch-Execute周期。
 
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/IXusEduux4Ww9JBmgLFzOti6i0lYQC4uZXIkiMsR5eg!/c/dFMBAAAAAAAA&bo=bwKLAQAAAAACF9Q!&rf=viewer_4)
+
 取得指令：从PC中获取指令地址，PC加2，再通过总线从内存中获取指令“LOD #3”，将指令送到IR中
 
 解码指令：Decoder将IR内的指令译成机器语言“00010100 00000011”
@@ -27,6 +31,8 @@ ACC 寄存器的全称为accumulator，用来储存计算产生的中间结果
 储存结果：将计算产生的中间结果“3”存储到ACC中
 
 #### 4.用“ADD W” 指令的执行过程，解释Fetch-Execute周期。
+
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/NJ12*9hXTeH8HC46OKyQ5kJscBJ.z8KAoo4g6g2ni3o!/c/dDcBAAAAAAAA&bo=bwKLAQAAAAACB8Q!&rf=viewer_4)
 
 取得指令：从PC中获取指令地址，PC加2，再通过总线从内存中获取指令“ADD W”，将指令送到IR中
 
@@ -41,6 +47,8 @@ ACC 寄存器的全称为accumulator，用来储存计算产生的中间结果
 “LOD #3”为单周期指令，在取指令周期中，指令取出到指令寄存器后，立即译码执行，不再需要其它的机器周期。“ADD W”为双周期指令，指令译码后，还需要从内存中获取数据，有两个机器周期。
 
 ### （3）点击“Binary”,观察回答下面问题：
+
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/vmhg.nhYmAbyM7W*f7tRPWWOODM2tnQoX6wwJ6tKNv8!/b/dFQBAAAAAAAA&bo=fQKLAQAAAAADF8c!&rf=viewer_4)
 
 #### 1.写出指令 “LOD #7” 的二进制形式，按指令结构，解释每部分的含义。
 
@@ -73,6 +81,8 @@ RAM电路由地址译码器、存储矩阵和读写控制电路三部分组成
 ### （1） 输入程序Program 2，运行并回答问题：
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/IyIQiQn324QsEVFqz*PK6kvCBVSvgX0iFpe.RbUUfAQ!/b/dDQBAAAAAAAA&bo=NgZIAgAAAAADF0g!&rf=viewer_4)
+
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/QghXnOxzWLpjSsVxDAI6UUmKUKjZgoEaLxaLlYXqA74!/b/dDYBAAAAAAAA&bo=fQKSAQAAAAADF94!&rf=viewer_4)
 
 #### 1.用一句话总结程序的功能
 
