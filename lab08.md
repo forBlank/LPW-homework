@@ -12,6 +12,8 @@
 
 #### 人设与道具（Game Sprites）：
 
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/qc8EfbMepiAKU45DElXEHG2E.aEIarQnyLO4UrQgTNs!/b/dFIBAAAAAAAA&bo=LwSlAgAAAAADB64!&rf=viewer_4)
+
 我舰：有20点生命值，可以抵抗紫色光弹的射击，但与敌人触碰则直接死亡。点击鼠标左键发射向鼠标指向发射蓝色光弹，伤害1。
 
 母舰：有30点生命值，可以抵抗蓝色光弹的射击，会向我舰发射单枚紫色光弹，伤害1，双联紫色光弹，伤害2，三联紫色光弹，伤害3。
@@ -21,6 +23,8 @@
 攻击舰：游离在地图周围，有10点生命值，可以抵抗蓝色光弹的射击，会向我舰发射单枚紫色光弹，伤害1。
 
 ## 游戏设计
+
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/5dqN59es*kbzzoipi*F3SQSVH6d*HINoHREKXjyK10E!/b/dFQBAAAAAAAA&bo=5wIVAwAAAAACd6A!&rf=viewer_4)
 
 1
 
