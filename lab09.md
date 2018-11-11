@@ -85,7 +85,7 @@ wait(time) {
 ```
 rollerrunning(frequency，time) {
 
-    for frequency from 1 to n
+    for n from 1 to frequency
     repeat
         motor_run(left)
     until (time_counter() > time)
@@ -187,7 +187,7 @@ halt(success)
 
 rollerrunning(frequency,time) {
 
-    for frequency from 1 to n
+    for n from 1 to frequency
     repeat
         motor_run(left)
     until (time_counter() > time)
