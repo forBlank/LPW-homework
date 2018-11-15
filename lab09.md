@@ -18,11 +18,11 @@
 主函数
 
 ```
-set StandardVolume     //标准体积
-set StandardTime       //标准时间
-set StandardSoakTime   //标准浸泡时间
-set RunFrequency       //运行频率
-set StandardRunTime    //标准运行时间
+set StandardVolume to 标准体积
+set StandardTime to 标准时间
+set StandardSoakTime to 标准浸泡时间
+set RunFrequency to 运行频率
+set StandardRunTime to 标准运行时间
 
 注水：注水(StandardVolume,StandardTime)
 
@@ -165,11 +165,11 @@ wait(time)
 注水(volume,timeout)
 排水(timeout)
 
-set StandardVolume
-set StandardTime
-set StandardSoakTime
-set RunFrequency
-set StandardRunTime
+set StandardVolume to 标准体积
+set StandardTime to 标准时间
+set StandardSoakTime to 标准浸泡时间
+set RunFrequency to 运行频率
+set StandardRunTime to 标准运行时间
 
 
 注水(StandardVolume,StandardTime)
