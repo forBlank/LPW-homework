@@ -33,7 +33,7 @@ $$ f''(x) - 2f'(x) + 2f(x) = 0 $$
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/ZTMpcJLYShCI56VDtBqQHXKr3otMkWQo0q8zMVs*IyI!/b/dFQBAAAAAAAA&bo=xwSTAQAAAAARF3E!&rf=viewer_4)
 
-$$ f(x) = e^{x}(C1sinx + C2cosx) (C1,C2为常数) $$
+$$ f(x) = e^{x}(C_{1}sinx + C_{2}cosx) (C_{1},C_{2}为常数) $$
 
 ### 线性代数
 
