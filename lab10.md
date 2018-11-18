@@ -18,11 +18,16 @@
 
 #### 求不定积分
 
+调用**integrate(ep,x)**，左边为被积函数，右边为积分变量
+
 $$ \int\frac{dx}{x(x^{5}+2)} = \frac{1}{10}ln|\frac{x^{5}}{x^{5}+2}| + C $$
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/ychHpkndakWxgHUpZC1PkssGEOGC9Xyw8Om0R43lKco!/b/dD4BAAAAAAAA&bo=wwSsAQAAAAARF0o!&rf=viewer_4)
 
+
 ####  解微分方程
+
+调用**dsolve(ep,x)**，左边为微分方程（要先将等式移项为右端为0的形式)，右边为要解的函数(在微分方程中)
 
 $$ f''(x) - 2f'(x) + 2f(x) = 0 $$
 
