@@ -12,23 +12,28 @@
 
 5.[实验小结](#实验小结)
 
-### 实验目的
+### 1.实验目的
 
 了解一种“解释型”语言 python
 
 使用 python 做一些简单的科学计算
 
-### 实验环境
+### 2.实验环境
 
 编程工具：Python（Anaconda3）
 
 操作系统：Windows
 
-### 高等数学练习
+### 3.高等数学练习
 
-#### 准备阶段
+#### 3.1.准备阶段
 
 导入`math`库和`sympy`库中所有函数和常量、变量
+
+```
+from math import *
+from sympy import *
+```
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/kk0vARdFA6jEZxzX38CQe8ma*EH4s3fYmbBKOHrqaAg!/b/dFQBAAAAAAAA&bo=yASqAQAAAAARF0c!&rf=viewer_4)
 
@@ -40,18 +45,30 @@
 
 具有强大科学运算功能的符号型数学计算库
 
-#### 求不定积分
+#### 3.2.求不定积分
 
 调用**integrate(ep,x)**，左边为被积函数，右边为积分变量
+
+```
+x = symbols('x') #声明符号变量 'x'
+integrate((x*(x**5+2))**(-1),x) 
+```
 
 $$ \int\frac{dx}{x(x^{5}+2)} = \frac{1}{10}ln|\frac{x^{5}}{x^{5}+2}| + C $$
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/ychHpkndakWxgHUpZC1PkssGEOGC9Xyw8Om0R43lKco!/b/dD4BAAAAAAAA&bo=wwSsAQAAAAARF0o!&rf=viewer_4)
 
 
-####  解微分方程
+#### 3.3.解微分方程
 
 调用**dsolve(ep,x)**，左边为微分方程（要先将等式移项为右端为0的形式)，右边为要解的函数(在微分方程中)
+
+调用**diff(f(x),x,n)**，求 f(x) 对 x 的 n 阶导数，n = 1时可省略不写
+
+```
+f = symbols('f', cls=Function) #声明符号函数 'f'
+dsolve(diff(f(x),x,2) - 2*diff(f(x),x) + 2*f(x),f(x))
+```
 
 $$ f''(x) - 2f'(x) + 2f(x) = 0 $$
 
@@ -59,11 +76,15 @@ $$ f''(x) - 2f'(x) + 2f(x) = 0 $$
 
 $$ f(x) = e^{x}(C_{1}sinx + C_{2}cosx) (C_{1},C_{2}为常数) $$
 
-### 线性代数练习
+### 4.线性代数练习
 
-#### 准备阶段
+#### 4.1.准备阶段
 
 导入`numpy`库中所有函数和常量、变量
+
+```
+from numpy import *
+```
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/sqalwUPgPWaXqKGdEQMkahPQ0RbjNibnfzv1kklPD3A!/b/dFIBAAAAAAAA&bo=wgSGAQAAAAARF2E!&rf=viewer_4)
 
@@ -71,7 +92,7 @@ $$ f(x) = e^{x}(C_{1}sinx + C_{2}cosx) (C_{1},C_{2}为常数) $$
 
 支持数组和矩阵运算，还有丰富的数学和物理方程可供使用
 
-#### 矩阵的逆
+#### 4.2.矩阵的逆
 
 $$ m = \left[ \begin{array}{ccc}
 3 & -7 & -2 & 2\\
@@ -80,6 +101,11 @@ $$ m = \left[ \begin{array}{ccc}
 -9 & 5 & -5 & 12
 \end{array} 
 \right ] $$
+
+```
+m = matrix([[3,-7,-2,2],[-3,5,1,0],[6,-4,0,-5]])
+m.I
+```
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/xCWF8Quckv1n*NGooaFt7yrEtLynpIBXLCK6aHL0gPE!/b/dC8BAAAAAAAA&bo=xgSsAQAAAAARF08!&rf=viewer_4)
 
@@ -91,7 +117,7 @@ $$ m^{-1} = \left[ \begin{array}{ccc}
 \end{array} 
 \right ] $$
 
-#### 矩阵乘法
+#### 4.3.矩阵乘法
 
 $$ m = \left[ \begin{array}{ccc}
 3 & -7 & -2 & 2\\
@@ -108,6 +134,12 @@ $$ m = \left[ \begin{array}{ccc}
 6 & 1 & -3 
 \end{array} 
 \right ] $$
+
+```
+m = matrix([[3,-7,-2,2],[-3,5,1,0],[6,-4,0,-5]])
+n = matrix([[4,-2,5],[-8,1,7],[5,3,-6],[12,9,-3]])
+m*n
+```
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/bWYfzK9i8Dl8tBBHKce0WZC*C6JOcI1A5D4W1VZLLPI!/b/dC4BAAAAAAAA&bo=xgTAAQAAAAARFyM!&rf=viewer_4)
 
@@ -134,7 +166,7 @@ $$ m*n = \left[ \begin{array}{ccc}
 \end{array} 
 \right ] $$
 
-### 实验小结
+### 5.实验小结
 
 初步学习了一门新语言 python ，被其清晰简洁的语法所震撼，对解释型语言，交互式语言，面向对象语言有了更多认识
 
