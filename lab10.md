@@ -66,7 +66,7 @@ $$ \int\frac{dx}{x(x^{5}+2)} = \frac{1}{10}ln|\frac{x^{5}}{x^{5}+2}| + C $$
 调用**diff(f(x),x,n)**，求 f(x) 对 x 的 n 阶导数，n = 1时可省略不写
 
 ```
-f = symbols('f', cls=Function) #声明符号函数 'f'
+f = symbols('f', cls=Function) #声明符号变量 'f' ，代表一个函数
 dsolve(diff(f(x),x,2) - 2*diff(f(x),x) + 2*f(x),f(x))
 ```
 
@@ -80,13 +80,14 @@ $$ f(x) = e^{x}(C_{1}sinx + C_{2}cosx) (C_{1},C_{2}为常数) $$
 
 #### 4.1.准备阶段
 
-导入`numpy`库中所有函数和常量、变量
+导入`numpy`库和`sympy`库中所有函数和常量、变量
 
 ```
 from numpy import *
+from sympy import *
 ```
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/sqalwUPgPWaXqKGdEQMkahPQ0RbjNibnfzv1kklPD3A!/b/dFIBAAAAAAAA&bo=wgSGAQAAAAARF2E!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/Bc3QwhrCwZugDrZqL565hRG5DndppFJ9ZJQC0cYtuUU!/b/dFMBAAAAAAAA&bo=xQRWAQAAAAARB6Y!&rf=viewer_4)
 
 `numpy`库
 
@@ -107,7 +108,7 @@ m = matrix([[3,-7,-2,2],[-3,5,1,0],[6,-4,0,-5]])
 m.I
 ```
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/xCWF8Quckv1n*NGooaFt7yrEtLynpIBXLCK6aHL0gPE!/b/dC8BAAAAAAAA&bo=xgSsAQAAAAARF08!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/u*Ue1vxnVTfKNGHYSV3FXdlWkXoxzxdyYDnT67l2Rig!/b/dFMBAAAAAAAA&bo=yQSnAQAAAAARF0s!&rf=viewer_4)
 
 $$ m^{-1} = \left[ \begin{array}{ccc}
 17 & 169/6 & 4 & -7/6\\
@@ -141,7 +142,7 @@ n = matrix([[4,-2,5],[-8,1,7],[5,3,-6],[12,9,-3]])
 m*n
 ```
 
-![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/bWYfzK9i8Dl8tBBHKce0WZC*C6JOcI1A5D4W1VZLLPI!/b/dC4BAAAAAAAA&bo=xgTAAQAAAAARFyM!&rf=viewer_4)
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/1lYdPrpRsoh6ip2lXlKNK9vkAHMMTulQ3g7iQ.nh3uY!/b/dDEBAAAAAAAA&bo=xwQMAgAAAAARF.0!&rf=viewer_4)
 
 $$ m*n = \left[ \begin{array}{ccc}
 3 & -7 & -2 & 2\\
@@ -165,6 +166,77 @@ $$ m*n = \left[ \begin{array}{ccc}
 -29 & 20 & -16 
 \end{array} 
 \right ] $$
+
+#### 4.4矩阵方程
+
+$$  A\vec x = \vec b $$
+
+$$ A = \left[ \begin{array}{ccc}
+1 & -7 & 0 & 6\\
+0 & 0 & 1 & -2\\
+-1 & 7 & -4 & 2
+\end{array} 
+\right ] 
+;
+\vec b = \left[ \begin{array}{ccc}
+5\\
+-3\\
+7
+\end{array} 
+\right ] $$
+
+
+```
+A = Matrix([[1,-7,0,6],[0,0,1,-2], [-1,7,-4,2]])
+b = Matrix([[5],[-3],[7]])
+x = symarray('x',(4,1)) #声明符号数组x
+solve(a*x-b)
+```
+
+![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/WjTEOR6FsGs22FpLGodx6iDM4htWsTtFILitCYQFmgQ!/b/dDIBAAAAAAAA&bo=xQQwAgAAAAARF9M!&rf=viewer_4)
+
+$$ \vec x =  \left[ \begin{array}{ccc}
+x_{0}\\
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array} 
+\right ]  
+= 
+\left[ \begin{array}{ccc}
+7x_{1} - 6x_{3} + 5\\
+x_{1}\\
+2x_{3} - 3\\
+x_{3}
+\end{array} 
+\right ]    
+=
+x_{1}\left[ \begin{array}{ccc}
+7\\
+1\\
+0\\
+0
+\end{array} 
+\right ]   
++
+x_{3}\left[ \begin{array}{ccc}
+-6\\
+0\\
+2\\
+1
+\end{array} 
+\right ]
++
+\left[ \begin{array}{ccc}
+5\\
+0\\
+-3\\
+0
+\end{array} 
+\right ]
+
+$$
+
 
 ### 5.实验小结
 
