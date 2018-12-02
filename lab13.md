@@ -218,3 +218,9 @@ void snakeMove(int x, int y) {
 	
 }
 ```
+
+### 四、完整代码
+
+[snake_move.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/snake_move.c)
+
+[snake_eat.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/snake_eat.c)
