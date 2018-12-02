@@ -1,44 +1,3 @@
-/*********************************** 
-
-贪吃蛇移动 设计思路
-
-1.输出地图 
-
-2.读取指令
-
-3.控制蛇移动 
-
-4.1~3循环直到游戏结束 
-
-
-1.输出地图
-
-双重for循环遍历输出地图 
-
-2.读取指令 
-
-getchar() -> 指令 
-getchar() -> 回车 
-
-3.蛇的移动
-
-两个数组记录蛇的x,y坐标
-根据坐标修改 map 
-
-坐标数组元素前移一位
-空出末尾修改为现在蛇头坐标
-
-3.1 蛇头撞墙或自身
-游戏结束
-
-3.2 蛇头进入空格
-
-将map上现在蛇头坐标改为蛇头 
-将map上之前蛇头坐标改为蛇身 
-将map上之前蛇尾坐标改为空格
-
-**********************************/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -85,18 +44,29 @@ int main(void) {
 		instruction = getchar();	//获得指令 
 		getchar();
 		switch(instruction) {		//控制蛇的移动
-			case 'A': 
-				snakeMove(-1, 0);break;
-			case 'D': 
-				snakeMove(1, 0);break;
-			case 'W': 
-				snakeMove(0, -1);break;
-			case 'S': 
-				snakeMove(0, 1);break;
+			case 'A': snakeMove(-1, 0);break;
+			case 'D': snakeMove(1, 0);break;
+			case 'W': snakeMove(0, -1);break;
+			case 'S': snakeMove(0, 1);break;
 		}
 	}
 	return 0;
-}	
+}
+
+void put_food(void) {
+	
+	int foodx = 0, foody = 0;
+	
+	if(foodflag) {
+		while(!(map[foody][foodx] == BLANK_CELL)) {	//食物坐标不为空格 
+			srand((unsigned)time(0));  		//随机生成食物坐标 
+			foodx = rand() % 11;
+			foody = rand() % 11;	
+		}
+		map[foody][foodx] = SNAKE_FOOD;
+		foodflag = 0;
+	}
+}
 
 void snakeMove(int x, int y) {
 	
@@ -127,6 +97,28 @@ void snakeMove(int x, int y) {
 		map[previous_heady][previous_headx] = SNAKE_BODY;	//移动前蛇头坐标修改为蛇身 
 		map[previous_taily][previous_tailx] = BLANK_CELL;	//移动前蛇尾坐标修改为空格 
 	}
+	
+	else if(map[present_heady][present_headx] == SNAKE_FOOD) {	//移动后蛇头坐标为食物 
+		
+		map[present_heady][present_headx] = SNAKE_HEAD;		//移动后蛇头坐标修改为蛇头
+		map[previous_heady][previous_headx] = SNAKE_BODY;	//移动前蛇头坐标修改为蛇身
+		
+		snakeLength++;
+		
+		for(i = snakeLength - 1; i > 0; i--) {	//坐标数组后移一位 
+		snakeX[i] = snakeX[i - 1];
+		snakeY[i] = snakeY[i - 1];
+		}
+		
+		snakeX[0] = previous_tailx;		//移动后蛇尾坐标 = 移动前蛇尾坐标
+		snakeY[0] = previous_taily;
+		
+		foodflag = 1;
+		
+		score++;
+	}
+	
+}
 
 void output(void) {
 	int i, j;
