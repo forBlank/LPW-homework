@@ -97,7 +97,8 @@ int main(void) {
 	
 	printf("Game Start!\n");
 	while(overflag) {
-		output();			//输出地图 
+		put_food();		
+		output();			 
 		instruction = getchar();	//获得指令 
 		getchar();
 		switch(instruction) {		//控制蛇的移动
