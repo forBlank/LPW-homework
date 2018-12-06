@@ -97,11 +97,11 @@ int main(void) {
 	
 	printf("Game Start!\n");
 	while(overflag) {
-		put_food();		
-		output();			 
-		instruction = getchar();	//获得指令 
+		put_food();	
+		output();		 
+		instruction = getchar();
 		getchar();
-		switch(instruction) {		//控制蛇的移动
+		switch(instruction) {
 			case 'A': snakeMove(-1, 0);break;
 			case 'D': snakeMove(1, 0);break;
 			case 'W': snakeMove(0, -1);break;
