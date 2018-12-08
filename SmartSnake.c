@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
 #include <math.h>
 #include <time.h>
+#include <sys/time.h>
 
 #define SNAKE_MAX_LENGTH 20    
 #define SNAKE_HEAD 'H'
@@ -10,14 +13,15 @@
 #define SNAKE_FOOD '$'
 #define WALL_CELL '*'
 
-char whereGoNext(int Hx,int Hy,int Fx,int Fy);	//控制蛇的移动 
+void sigroutine(int signo);
+char whereGoNext(int Hx,int Hy,int Fx,int Fy);
 int calculate_distance(int Hx,int Hy,int Fx,int Fy);
 void snakeMove(int, int);       
-void put_food(void);            //放置食物  
-void output(void);              //输出地图 
-void gameover(void);            //游戏结束 
+void put_food(void);
+void output(void); 
+void gameover(void);
 
-char map[12][12] = 				//初始化地图 
+char map[12][12] = 
 	{"************",
 	"*XXXXH     *",
 	"*       *  *",
@@ -38,39 +42,54 @@ int foodx = 0, foody = 0;
 int overflag = 1, foodflag = 1;
 int score = 0;
 
-int main(void) {
+int main(void){
 	
+   struct itimerval value, ovalue;
+   
+   printf("Game Start!\n");
+   
+   signal(SIGALRM, sigroutine);
+   value.it_value.tv_sec = 1;
+   value.it_value.tv_usec = 0;
+   value.it_interval.tv_sec = 1;
+   value.it_interval.tv_usec = 0;
+   setitimer(ITIMER_REAL, &value, &ovalue);
+   
+   for(  ;overflag; );
+   
+   return 0;
+}
+
+void sigroutine(int signo){
 	
 	char instruction;
 	
-	printf("Game Start!\n");
-	while(overflag) {
-		put_food();	
-		output();
-		
-		instruction = whereGoNext(snakeX[snakeLength - 1], snakeY[snakeLength - 1], foodx, foody); 
-		switch(instruction) {						
-			case 'A': {
-				snakeMove(-1, 0);
-				break;
-			}
-			case 'D': {
-				snakeMove(1, 0);
-				break;
-			}
-			case 'W': {
-				snakeMove(0, -1);
-				break;
-			}
-			case 'S': {
-				snakeMove(0, 1);
-				break;
-			}
+	put_food();	
+	output();
+	instruction = whereGoNext(snakeX[snakeLength - 1], snakeY[snakeLength - 1], foodx, foody); 
+	switch(instruction) {						
+		case 'A': {
+			snakeMove(-1, 0);
+			break;
+		}
+		case 'D': {
+			snakeMove(1, 0);
+			break;
+		}
+		case 'W': {
+			snakeMove(0, -1);
+			break;
+		}
+		case 'S': {
+			snakeMove(0, 1);
+			break;
 		}
 	}
-
-	return 0;
-}	
+	
+	signal(SIGALRM, sigroutine);
+    
+	return;
+}
 
 char whereGoNext(int Hx,int Hy,int Fx,int Fy) {
 	char move[4] = {'A', 'D', 'W', 'S'};
