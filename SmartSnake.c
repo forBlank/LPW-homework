@@ -162,7 +162,7 @@ void snakeMove(int x, int y) {
 		snakeY[i] = snakeY[i - 1];
 		}
 		
-		snakeX[0] = previous_tailx;					//移动后蛇尾坐标 = 移动前蛇尾坐标
+		snakeX[0] = previous_tailx;				//移动后蛇尾坐标 = 移动前蛇尾坐标
 		snakeY[0] = previous_taily;
 		
 		foodflag = 1;
@@ -176,7 +176,7 @@ void put_food(void) {
 	
 	if(foodflag) {
 		while(!(map[foody][foodx] == BLANK_CELL)) {		//食物坐标不为空格 
-			srand((unsigned)time(0));  				//随机生成食物坐标 
+			srand((unsigned)time(0));  			//随机生成食物坐标 
 			foodx = rand() % 11;
 			foody = rand() % 11;	
 		}
