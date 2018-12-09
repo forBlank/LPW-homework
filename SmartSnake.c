@@ -92,7 +92,7 @@ void sigroutine(int signo){
 }
 
 char whereGoNext(int Hx,int Hy,int Fx,int Fy) {
-	char move[4] = {'A', 'D', 'W', 'S'};
+	char direction[4] = {'A', 'D', 'W', 'S'};
 	int distance[4] = {0};
 	int min = 9999, index = 0;
 	int i;
@@ -109,7 +109,7 @@ char whereGoNext(int Hx,int Hy,int Fx,int Fy) {
 		}
 	}
 	
-	return move[index];
+	return direction[index];
 }
 
 int calculate_distance(int Hx,int Hy,int Fx,int Fy) {

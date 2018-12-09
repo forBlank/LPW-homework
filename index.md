@@ -29,7 +29,7 @@
 12. [12-我喜欢的X语言](lab12)
 13. [13-贪吃蛇实验报告](lab13)/[snake_move.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/snake_move.c)/[snake_eat.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/snake_eat.c)
 14. [14-IT风投之我见](lab14)
-15. [15-智能蛇实验报告](lab15)
+15. [15-智能蛇实验报告](lab15)/[kbhit( ).c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/kbhit(%20).c)/[SmartSnake.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/SmartSnake.c)
 16. [16-互联网时代的盈利模式](lab16)
 
 
