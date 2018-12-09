@@ -35,7 +35,7 @@ char map[12][12] =
 	"* *        *",
 	"************"};
 	
-int snakeX[SNAKE_MAX_LENGTH] = {1, 2, 3, 4, 5};		//初始化蛇的坐标 
+int snakeX[SNAKE_MAX_LENGTH] = {1, 2, 3, 4, 5}; 
 int snakeY[SNAKE_MAX_LENGTH] = {1, 1, 1, 1, 1};		 
 int snakeLength = 5;
 int foodx = 0, foody = 0;
@@ -114,8 +114,8 @@ char whereGoNext(int Hx,int Hy,int Fx,int Fy) {
 
 int calculate_distance(int Hx,int Hy,int Fx,int Fy) {
 	
-	if(map[Hy][Hx] == ' ' || map[Hy][Hx - 1] == '$')
-		return abs(Fx - (Hx - 1)) + abs(Fy - Hy);
+	if(map[Hy][Hx] == ' ' || map[Hy][Hx] == '$')
+		return abs(Fx - Hx) + abs(Fy - Hy);
 	else
 		return 9999;
 }
@@ -124,13 +124,13 @@ void snakeMove(int x, int y) {
 	
 	int i;
 	
-	int previous_tailx = snakeX[0];						//记录移动前蛇尾坐标 
+	int previous_tailx = snakeX[0];				//记录移动前蛇尾坐标 
 	int previous_taily = snakeY[0];					 
 	int previous_headx = snakeX[snakeLength - 1];		//记录移动前蛇头坐标
 	int previous_heady = snakeY[snakeLength - 1];	 
 	
 	
-	for(i = 0; i < snakeLength - 1; i++) {				//坐标数组元素前移一位，去掉蛇尾坐标 
+	for(i = 0; i < snakeLength - 1; i++) {			//坐标数组元素前移一位，去掉蛇尾坐标 
 		snakeX[i] = snakeX[i + 1];
 		snakeY[i] = snakeY[i + 1];
 	}
@@ -145,24 +145,24 @@ void snakeMove(int x, int y) {
 	map[present_heady][present_headx] == WALL_CELL) gameover();
 	
 	else if(map[present_heady][present_headx] == BLANK_CELL) {	//移动后蛇头坐标为空格 
-		map[present_heady][present_headx] = SNAKE_HEAD;			//移动后蛇头坐标修改为蛇头 
-		map[previous_heady][previous_headx] = SNAKE_BODY;		//移动前蛇头坐标修改为蛇身 
-		map[previous_taily][previous_tailx] = BLANK_CELL;		//移动前蛇尾坐标修改为空格 
+		map[present_heady][present_headx] = SNAKE_HEAD;		//移动后蛇头坐标修改为蛇头 
+		map[previous_heady][previous_headx] = SNAKE_BODY;	//移动前蛇头坐标修改为蛇身 
+		map[previous_taily][previous_tailx] = BLANK_CELL;	//移动前蛇尾坐标修改为空格 
 	}
 	
 	else if(map[present_heady][present_headx] == SNAKE_FOOD) {	//移动后蛇头坐标为食物 
 		
-		map[present_heady][present_headx] = SNAKE_HEAD;			//移动后蛇头坐标修改为蛇头
-		map[previous_heady][previous_headx] = SNAKE_BODY;		//移动前蛇头坐标修改为蛇身
+		map[present_heady][present_headx] = SNAKE_HEAD;		//移动后蛇头坐标修改为蛇头
+		map[previous_heady][previous_headx] = SNAKE_BODY;	//移动前蛇头坐标修改为蛇身
 		
 		snakeLength++;
 		
-		for(i = snakeLength - 1; i > 0; i--) {					//坐标数组后移一位 
+		for(i = snakeLength - 1; i > 0; i--) {			//坐标数组后移一位 
 		snakeX[i] = snakeX[i - 1];
 		snakeY[i] = snakeY[i - 1];
 		}
 		
-		snakeX[0] = previous_tailx;								//移动后蛇尾坐标 = 移动前蛇尾坐标
+		snakeX[0] = previous_tailx;					//移动后蛇尾坐标 = 移动前蛇尾坐标
 		snakeY[0] = previous_taily;
 		
 		foodflag = 1;
@@ -175,8 +175,8 @@ void snakeMove(int x, int y) {
 void put_food(void) {
 	
 	if(foodflag) {
-		while(!(map[foody][foodx] == BLANK_CELL)) {				//食物坐标不为空格 
-			srand((unsigned)time(0));  							//随机生成食物坐标 
+		while(!(map[foody][foodx] == BLANK_CELL)) {		//食物坐标不为空格 
+			srand((unsigned)time(0));  				//随机生成食物坐标 
 			foodx = rand() % 11;
 			foody = rand() % 11;	
 		}
