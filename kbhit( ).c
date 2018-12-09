@@ -34,6 +34,10 @@ int snakeLength = 5;
 int overflag = 1, foodflag = 1;
 int score = 0;
 
+void snakeMove(int, int);
+void put_food(void);  
+void output(void); 
+void gameover(void);
 
 static struct termios ori_attr, cur_attr;
 
