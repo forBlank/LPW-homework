@@ -16,7 +16,7 @@
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/Vh0L02Myvpw8oIVQ2ZeO*2cGLfhxzq6VatNYacgXE7M!/b/dFMBAAAAAAAA&bo=GQMqAgAAAAADBxA!&rf=viewer_4)
 
-1. Linux (Unbutu发行版)
+2. Linux (Unbutu发行版)
 
 ![](http://m.qpic.cn/psb?/V10TtYkp2MvHv1/KkFGUJhuMZbE3A66X5*mGj9R9lRGnw0yfzgnae3Uuco!/b/dDYBAAAAAAAA&bo=IgOyAgAAAAADJ5M!&rf=viewer_4)
 
