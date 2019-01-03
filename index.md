@@ -31,6 +31,7 @@
 14. [14-IT风投之我见](lab14)
 15. [15-智能蛇实验报告](lab15)/[kbhit( ).c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/kbhit(%20).c)/[SmartSnake.c](https://github.com/iLaiPW/LPW-homework/blob/gh-pages/SmartSnake.c)
 16. [16-互联网时代的盈利模式](lab16)
+17. [17.互联网时代的热点领域选择、营销方法](lab17)
 
 
 ## Markdown 语法演示
